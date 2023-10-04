@@ -1,0 +1,29 @@
+{
+  "faculties": [
+    {
+      "name": "FCIM",
+      "students": [
+        "Lupan Lucian",
+        "Latcovschi Catalin"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "name": "Lupan Lucian",
+      "email": "lucian.lupan@isa.utm.md",
+      "faculty": null
+    },
+    {
+      "name": "Latcovschi Catalin",
+      "email": "catalin.latcovschi@isa.utm.md",
+      "faculty": {
+        "name": "FCIM",
+        "students": [
+          "Lupan Lucian",
+          "Latcovschi Catalin"
+        ]
+      }
+    }
+  ]
+}
