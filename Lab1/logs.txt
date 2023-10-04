@@ -1,0 +1,55 @@
+[2023-10-04T19:37:40.718Z] Error: Faculty 22 not found for student 1111111 (222)
+[2023-10-04T19:43:00.795Z] Create Faculty: FCIM (Software)
+[2023-10-04T19:43:00.795Z] Create Faculty: FCIM (Software)
+[2023-10-04T19:43:33.340Z] Create and Assign: Latcovschi Catalin to FCIM
+[2023-10-04T19:43:49.165Z] Graduate Student: Latcovschi Catalin from FCIM
+[2023-10-04T19:43:55.746Z] Display Current Enrolled Students: Displayed current students in all faculties.
+[2023-10-04T19:44:11.740Z] Display Graduates: Displayed graduates from all faculties.
+[2023-10-04T19:44:22.874Z] Error: Student with email www@ww.ww not found for belonging check.
+[2023-10-04T19:44:40.867Z] Warning: Student with email catalin.latcovschi@isa.utm.md not found in any faculty.
+[2023-10-04T19:44:49.907Z] Display Faculties: Displayed all faculties.
+[2023-10-04T19:44:49.907Z] Display University Faculties: Displayed all university faculties.
+[2023-10-04T19:45:02.278Z] Display Faculties By Field: Displayed faculties in the field software.
+[2023-10-04T19:45:02.278Z] Display Faculties by Field: Displayed faculties in the field software.[2023-10-04T19:55:37.658Z] Create Faculty: FCIM (test)
+[2023-10-04T19:55:37.658Z] Create Faculty: FCIM (test)
+[2023-10-04T20:03:32.581Z] INFO: Create Faculty FCIM (test)
+[2023-10-04T20:03:32.582Z] INFO: Create Faculty FCIM (test)
+[2023-10-04T20:08:22.009Z] INFO: Create Faculty FCIM (SOFTWARE_ENGINEERING)
+[2023-10-04T20:08:22.009Z] INFO: Create Faculty FCIM (SOFTWARE_ENGINEERING)
+[2023-10-04T20:09:11.883Z] INFO: Create Faculty FCIM (SOFTWARE_ENGINEERING)
+[2023-10-04T20:09:11.883Z] INFO: Create Faculty FCIM (Software Engineering)
+[2023-10-04T20:10:04.960Z] INFO: Displayed all faculties.
+[2023-10-04T20:10:04.960Z] INFO: Displayed all university faculties.
+[2023-10-04T20:10:31.832Z] INFO: Displayed current students in all faculties.
+[2023-10-04T20:10:49.687Z] INFO: Displayed all faculties.
+[2023-10-04T20:10:49.687Z] INFO: Displayed all university faculties.
+[2023-10-04T20:11:03.258Z] WARN: Student with email catalin.latcovschi@isa.utm.md not found in any faculty.
+[2023-10-04T20:11:25.930Z] INFO: Displayed faculties in the field SOFTWARE_ENGINEERING.
+[2023-10-04T20:11:25.930Z] INFO: Displayed faculties in the field SOFTWARE_ENGINEERING.
+[2023-10-04T20:11:58.482Z] INFO: Displayed graduates from all faculties.
+[2023-10-04T20:12:32.103Z] INFO: Create and Assign Lupan Lucian to FCIM
+[2023-10-04T20:21:20.499Z] INFO: Create and Assign Lupan Lucian to FCIM
+[2023-10-04T20:21:52.273Z] INFO: Create and Assign qwertyu to FCIM
+[2023-10-04T20:24:35.726Z] INFO: Create and Assign ws to FCIM
+[2023-10-04T20:25:16.657Z] INFO: Create and Assign ssssss to FCIM
+[2023-10-04T20:26:51.169Z] INFO: Create and Assign sssss to FCIM
+[2023-10-04T20:27:52.870Z] INFO: Create and Assign ssssss to FCIM
+[2023-10-04T20:29:39.320Z] INFO: Create and Assign aaaaaa to FCIM
+[2023-10-04T20:32:17.853Z] ERROR: Faculty dd not found for student Test (ssss@xss.ss)
+[2023-10-04T20:32:46.067Z] INFO: Create and Assign wwww to FCIM
+[2023-10-04T20:35:59.632Z] INFO: Create and Assign wwwww to FCIM
+[2023-10-04T20:36:38.186Z] INFO: Create and Assign ssssss to FCIM
+[2023-10-04T20:39:20.398Z] INFO: Create and Assign Lupan Lucian to FCIM
+[2023-10-04T20:39:49.602Z] INFO: Create and Assign Lupan Lucian to FCIM
+[2023-10-04T20:40:40.304Z] INFO: Create and Assign Latcovschi Catalin to FCIM
+[2023-10-04T20:41:46.967Z] INFO: Create and Assign Clepa Rodion to FCIM
+[2023-10-04T20:42:27.740Z] INFO: Create and Assign Clepa Rodion to FCIM
+[2023-10-04T20:43:29.782Z] INFO: Create and Assign Clepa Rodion to FCIM
+[2023-10-04T20:44:26.150Z] INFO: Create and Assign Clepa Rodion to FCIM
+[2023-10-04T20:50:47.033Z] INFO: Create Faculty FCIM (SOFTWARE_ENGINEERING)
+[2023-10-04T20:50:47.034Z] INFO: Create Faculty FCIM (Software Engineering)
+[2023-10-04T20:51:11.353Z] INFO: Create and Assign Latcovschi Catalin to FCIM
+[2023-10-04T20:51:57.028Z] INFO: Create and Assign Lupan Lucian to FCIM
+[2023-10-04T20:53:10.712Z] INFO: Create and Assign Latcovschi Catalin to FCIM
+[2023-10-04T20:54:14.917Z] INFO: Create and Assign Clepa Rodion to FCIM
+[2023-10-04T20:56:15.300Z] INFO: Create and Assign Latcovschi Catalin to FCIM
