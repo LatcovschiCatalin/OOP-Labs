@@ -53,3 +53,177 @@
 [2023-10-04T20:53:10.712Z] INFO: Create and Assign Latcovschi Catalin to FCIM
 [2023-10-04T20:54:14.917Z] INFO: Create and Assign Clepa Rodion to FCIM
 [2023-10-04T20:56:15.300Z] INFO: Create and Assign Latcovschi Catalin to FCIM
+[2023-10-09T08:48:55.394Z] INFO: Create and Assign John Doe to FCIM
+[2023-10-09T08:53:18.601Z] ERROR: Batch Graduation operation requires a filename.
+[2023-10-09T08:57:23.625Z] ERROR: Invalid operation. Supported operations are: batchenroll, batchgraduate
+[2023-10-09T08:57:48.601Z] ERROR: Batch Graduation operation requires a filename.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T08:59:33.323Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T08:59:33.322Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T08:59:33.323Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:00:12.467Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T09:00:12.467Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T09:00:12.468Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:00:12.468Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:02:21.554Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T09:02:21.554Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:02:21.555Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:04:00.539Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T09:04:00.539Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T09:04:00.539Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:00.539Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T09:04:00.539Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:00.540Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T09:04:00.540Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:11.450Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T09:04:11.450Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:04:47.697Z] ERROR: Student with email { not found for batch graduation.
+[2023-10-09T09:04:47.698Z] ERROR: Student with email   "faculties": [ not found for batch graduation.
+[2023-10-09T09:04:47.698Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:47.698Z] ERROR: Student with email       "name": "FCIM", not found for batch graduation.
+[2023-10-09T09:04:47.698Z] ERROR: Student with email       "students": [] not found for batch graduation.
+[2023-10-09T09:04:47.698Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:47.699Z] ERROR: Student with email   ], not found for batch graduation.
+[2023-10-09T09:04:47.699Z] ERROR: Student with email   "students": [ not found for batch graduation.
+[2023-10-09T09:04:47.699Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:47.699Z] ERROR: Student with email       "name": "Lupan Lucian", not found for batch graduation.
+[2023-10-09T09:04:47.700Z] ERROR: Student with email       "email": "lucian.lupan@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:47.700Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:47.700Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:47.701Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:47.701Z] ERROR: Student with email       "name": "Latcovschi Catalin", not found for batch graduation.
+[2023-10-09T09:04:47.701Z] ERROR: Student with email       "email": "catalin.latcovschi@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:47.701Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:47.702Z] ERROR: Student with email     }, not found for batch graduation.
+[2023-10-09T09:04:47.702Z] ERROR: Student with email     { not found for batch graduation.
+[2023-10-09T09:04:47.703Z] ERROR: Student with email       "name": "John Doe", not found for batch graduation.
+[2023-10-09T09:04:47.703Z] ERROR: Student with email       "email": "john.doe@isa.utm.md", not found for batch graduation.
+[2023-10-09T09:04:47.703Z] ERROR: Student with email       "faculty": null not found for batch graduation.
+[2023-10-09T09:04:47.704Z] ERROR: Student with email     } not found for batch graduation.
+[2023-10-09T09:04:47.704Z] ERROR: Student with email   ] not found for batch graduation.
+[2023-10-09T09:04:47.705Z] ERROR: Student with email } not found for batch graduation.
+[2023-10-09T09:04:47.705Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:05:33.675Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:05:33.675Z] ERROR: Failed to read or process the batch graduation file: Cannot read properties of undefined (reading 'length')
+[2023-10-09T09:06:15.804Z] ERROR: Student with email [object Object] not found for batch graduation.
+[2023-10-09T09:06:15.805Z] ERROR: Student with email [object Object] not found for batch graduation.
+[2023-10-09T09:06:15.806Z] ERROR: Student with email [object Object] not found for batch graduation.
+[2023-10-09T09:06:15.806Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:07:24.200Z] ERROR: Student with email undefined not found for batch graduation.
+[2023-10-09T09:07:24.200Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:08:47.273Z] ERROR: Failed to read or process the batch graduation file: faculty.graduateStudent is not a function
+[2023-10-09T09:08:47.273Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:18:07.499Z] ERROR: Failed to read or process the batch graduation file: faculty.graduateStudent is not a function
+[2023-10-09T09:18:07.499Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T09:21:52.899Z] INFO: Batch Graduation John Doe from FCIM
+[2023-10-09T09:21:52.900Z] INFO: Batch graduation completed using file: data.json

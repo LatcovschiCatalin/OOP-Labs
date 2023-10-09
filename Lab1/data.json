@@ -3,8 +3,7 @@
     {
       "name": "FCIM",
       "students": [
-        "Lupan Lucian",
-        "Latcovschi Catalin"
+        "John Doe"
       ]
     }
   ],
@@ -17,11 +16,16 @@
     {
       "name": "Latcovschi Catalin",
       "email": "catalin.latcovschi@isa.utm.md",
+      "faculty": null
+    },
+    {
+      "name": "John Doe",
+      "email": "john.doe@isa.utm.md",
       "faculty": {
         "name": "FCIM",
         "students": [
-          "Lupan Lucian",
-          "Latcovschi Catalin"
+          "Latcovschi Catalin",
+          "John Doe"
         ]
       }
     }

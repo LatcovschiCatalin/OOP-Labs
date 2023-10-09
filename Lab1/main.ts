@@ -192,7 +192,7 @@ process.on('exit', () => {
     saveState();
 });
 
-function handleExtraOperations(input: string) {
+function handleExtraOperations(input: string, email: string) {
     const operationParts = input.split(' ');
     const operation = operationParts[0].toLowerCase();
     const args = operationParts.slice(1);
@@ -212,7 +212,7 @@ function handleExtraOperations(input: string) {
                 console.log('Error: Batch Graduation operation requires a filename.');
                 operationLogger.log('ERROR', 'Batch Graduation operation requires a filename.');
             } else {
-                university.batchGraduateStudents(args[0]);
+                university.batchGraduateStudents(args[0], email);
                 operationLogger.log('INFO', `Batch graduation completed using file: ${args[0]}`);
             }
             break;
@@ -221,3 +221,5 @@ function handleExtraOperations(input: string) {
             operationLogger.log('ERROR', 'Invalid operation. Supported operations are: batchenroll, batchgraduate');
     }
 }
+
+handleExtraOperations('batchgraduate data.json', 'john.doe@isa.utm.md')

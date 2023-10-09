@@ -77,35 +77,25 @@ var University = /** @class */ (function () {
             operationLogger.log('ERROR', "Failed to read or process the batch enrollment file: ".concat(error.message));
         }
     };
-    University.prototype.batchGraduateStudents = function (filename) {
-        try {
-            var fileData = fs.readFileSync(filename, 'utf8');
-            var emailsToGraduate = fileData.split('\n');
-            var _loop_2 = function (email) {
-                var student = students.find(function (s) { return s.email === email; });
-                if (student) {
-                    var faculty = student.faculty;
-                    if (faculty) {
-                        faculty.graduateStudent(student);
-                        operationLogger.log('INFO', "Batch Graduation ".concat(student.name, " from ").concat(faculty.name));
-                    }
-                    else {
-                        operationLogger.log('ERROR', "".concat(student.name, " is not enrolled in any faculty."));
-                    }
-                }
-                else {
-                    operationLogger.log('ERROR', "Student with email ".concat(email, " not found for batch graduation."));
-                }
-            };
-            for (var _i = 0, emailsToGraduate_1 = emailsToGraduate; _i < emailsToGraduate_1.length; _i++) {
-                var email = emailsToGraduate_1[_i];
-                _loop_2(email);
+    University.prototype.batchGraduateStudents = function (filename, email) {
+        var fileData = fs.readFileSync(filename, 'utf8');
+        var student = students.find(function (s) { return s.email === email; });
+        console.log(student);
+        if (student) {
+            var faculty = this.faculties.find(function (s) { return s.name === student.faculty.name; });
+            console.log(faculty);
+            if (faculty) {
+                faculty.graduateStudent(student);
+                operationLogger.log('INFO', "Batch Graduation ".concat(student.name, " from ").concat(faculty.name));
             }
-            console.log('Batch graduation completed.');
+            else {
+                operationLogger.log('ERROR', "".concat(student.name, " is not enrolled in any faculty."));
+            }
         }
-        catch (error) {
-            operationLogger.log('ERROR', "Failed to read or process the batch graduation file: ".concat(error.message));
+        else {
+            operationLogger.log('ERROR', "Student with email ".concat(email, " not found for batch graduation."));
         }
+        console.log('Batch graduation completed.');
     };
     return University;
 }());

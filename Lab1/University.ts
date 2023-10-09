@@ -15,6 +15,7 @@ export class University {
     isFieldValid(field) {
         return Object.keys(StudyField).includes(field);
     }
+
     createFaculty(name: string, field: StudyField) {
         if (this.isFieldValid(field)) {
             const faculty = new Faculty(name, StudyField[field]);
@@ -72,27 +73,22 @@ export class University {
         }
     }
 
-    batchGraduateStudents(filename: string) {
-        try {
+    batchGraduateStudents(filename: string, email: string) {
             const fileData = fs.readFileSync(filename, 'utf8');
-            const emailsToGraduate = fileData.split('\n');
-            for (const email of emailsToGraduate) {
-                const student = students.find(s => s.email === email);
-                if (student) {
-                    const faculty = student.faculty;
-                    if (faculty) {
-                        faculty.graduateStudent(student);
-                        operationLogger.log('INFO', `Batch Graduation ${student.name} from ${faculty.name}`);
-                    } else {
-                        operationLogger.log('ERROR', `${student.name} is not enrolled in any faculty.`);
-                    }
+            const student = students.find(s => s.email === email);
+            console.log(student)
+            if (student) {
+                const faculty = this.faculties.find(s => s.name === student.faculty.name);
+                console.log(faculty)
+                if (faculty) {
+                    faculty.graduateStudent(student);
+                    operationLogger.log('INFO', `Batch Graduation ${student.name} from ${faculty.name}`);
                 } else {
-                    operationLogger.log('ERROR', `Student with email ${email} not found for batch graduation.`);
+                    operationLogger.log('ERROR', `${student.name} is not enrolled in any faculty.`);
                 }
+            } else {
+                operationLogger.log('ERROR', `Student with email ${email} not found for batch graduation.`);
             }
             console.log('Batch graduation completed.');
-        } catch (error) {
-            operationLogger.log('ERROR', `Failed to read or process the batch graduation file: ${error.message}`);
-        }
     }
 }
