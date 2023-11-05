@@ -51,10 +51,7 @@ class Folder {
         this.files.forEach((file) => {
             const filePath = `./SRC/${file.name}.${file.extension}`;
             const fileData = fs.readFileSync(filePath, 'utf-8');
-
-            if (fileData !== file.data) {
-                file.hasChangedSinceCommit = true;
-            }
+            file.hasChangedSinceCommit = fileData !== file.data;
             console.log(`${file.name}.${file.extension}: ${file.hasChangedSinceLastCommit() ? 'Changed' : 'Unchanged'}`);
         });
     }

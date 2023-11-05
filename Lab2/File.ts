@@ -28,6 +28,7 @@ class File {
     }
 
     hasChangedSinceLastCommit(): boolean {
+        if (this.hasChangedSinceCommit) this.updatedDateTime = new Date();
         return this.hasChangedSinceCommit;
     }
 }
