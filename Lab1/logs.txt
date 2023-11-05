@@ -227,3 +227,6 @@
 [2023-10-09T09:18:07.499Z] INFO: Batch graduation completed using file: data.json
 [2023-10-09T09:21:52.899Z] INFO: Batch Graduation John Doe from FCIM
 [2023-10-09T09:21:52.900Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T10:05:41.745Z] INFO: Batch Graduation John Doe from FCIM
+[2023-10-09T10:05:41.746Z] INFO: Batch graduation completed using file: data.json
+[2023-10-09T10:06:17.810Z] INFO: Create and Assign Latcovschi to FCIM
