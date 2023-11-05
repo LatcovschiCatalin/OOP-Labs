@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 import File from './File';
 import TextFile from './TextFile';
+import ImageFile from "./ImageFile";
+import sizeOf from 'image-size';
 
 class Folder {
     files: File[] = [];
@@ -16,8 +18,9 @@ class Folder {
             const fileName = file.split('.')[0];
             const fileExtension = file.split('.').pop();
 
-            if (fileExtension === 'png') {
-                console.log(`Image file detected: ${file}`);
+            if (fileExtension === 'png' || fileExtension === 'jpg') {
+                const dimensions = this.getImageDimensions(`./SRC/${file}`);
+                this.files.push(new ImageFile(fileName, fileExtension, dimensions.width, dimensions.height, fileData));
             } else if (fileExtension === 'txt') {
                 this.files.push(new TextFile(fileName, fileExtension, fileData));
             } else if (fileExtension === 'ts') {
@@ -26,6 +29,16 @@ class Folder {
         });
 
         console.log('Files in the SRC folder have been read and added to the SRC.');
+    }
+
+    private getImageDimensions(filePath: string) {
+        let dimensions = { width: 0, height: 0 };
+
+        if (fs.existsSync(filePath)) {
+            dimensions = sizeOf(filePath);
+        }
+
+        return dimensions;
     }
 
     commit() {
