@@ -4,7 +4,7 @@ class TextFile extends File {
     private content: string;
 
     constructor(name: string, extension: string, content: string) {
-        super(name, extension);
+        super(name, extension, content);
         this.content = content;
     }
 

@@ -14,7 +14,6 @@ class Folder {
         fs.readdirSync('./SRC').forEach((file) => {
             const fileData = fs.readFileSync(`./SRC/${file}`, 'utf-8');
             const fileName = file.split('.')[0];
-            console.log(fileName)
             const fileExtension = file.split('.').pop();
 
             if (fileExtension === 'png') {
@@ -31,7 +30,11 @@ class Folder {
 
     commit() {
         this.lastSnapshotTime = new Date();
-        this.files.forEach((file) => file.commit());
+        this.files.forEach((file) => {
+            const filePath = `./SRC/${file.name}.${file.extension}`;
+            file.data = fs.readFileSync(filePath, 'utf-8');
+            file.commit();
+        });
     }
 
     info(filename: string) {
@@ -46,8 +49,13 @@ class Folder {
     status() {
         console.log('Change Status Since Last Snapshot:');
         this.files.forEach((file) => {
-            const hasChanged = file.hasChangedSinceLastCommit(this.lastSnapshotTime);
-            console.log(`${file.name}.${file.extension}: ${hasChanged ? 'Changed' : 'Unchanged'}`);
+            const filePath = `./SRC/${file.name}.${file.extension}`;
+            const fileData = fs.readFileSync(filePath, 'utf-8');
+
+            if (fileData !== file.data) {
+                file.hasChangedSinceCommit = true;
+            }
+            console.log(`${file.name}.${file.extension}: ${file.hasChangedSinceLastCommit() ? 'Changed' : 'Unchanged'}`);
         });
     }
 }
