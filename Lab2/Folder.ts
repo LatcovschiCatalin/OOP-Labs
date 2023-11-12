@@ -11,6 +11,7 @@ class Folder {
 
     constructor() {
         this.readFilesFromSRC();
+        this.scheduleDetection();
     }
 
     private readFilesFromSRC() {
@@ -28,8 +29,6 @@ class Folder {
                 this.files.push(new ProgramFile(fileName, fileExtension, fileData));
             }
         });
-
-        console.log('Files in the SRC folder have been read and added to the SRC.');
     }
 
     private getImageDimensions(filePath: string) {
@@ -66,16 +65,38 @@ class Folder {
 
     private isFileAdded(file: File): boolean {
         const filePath = this.getFilePath(file);
-        return !this.files.some((f) => `${f.name}.${f.extension}` === `${file.name}.${file.extension}`);
+        return !fs.existsSync(filePath);
     }
 
     private isFileDeleted(file: File): boolean {
-        return !fs.existsSync(this.getFilePath(file));
+        return !this.files.some((f) => `${f.name}.${f.extension}` === `${file.name}.${file.extension}`);
     }
 
     private isFileChanged(filePath: string, lastCommitTime: Date): boolean {
         const fileData = fs.readFileSync(filePath, 'utf-8');
-        return fileData !== fs.readFileSync(filePath, 'utf-8');
+        return fileData !== fs.readFileSync(filePath, 'utf-8') || lastCommitTime < fs.statSync(filePath).mtime;
+    }
+
+    private detectChanges() {
+        console.log('Scheduled detection:');
+        this.files.forEach((file) => {
+            const filePath = this.getFilePath(file);
+
+            if (this.isFileAdded(file)) {
+                console.log(`${file.name}.${file.extension}: Added`);
+            } else if (this.isFileDeleted(file)) {
+                console.log(`${file.name}.${file.extension}: Deleted`);
+            } else {
+                const hasChanged = this.isFileChanged(filePath, file.updatedDateTime !== file.createdDateTime ? file.lastCommitDate : this.lastSnapshotTime);
+                console.log(`${file.name}.${file.extension}: ${hasChanged ? 'Changed' : 'Unchanged'}`);
+            }
+        });
+    }
+
+    private scheduleDetection() {
+        setInterval(() => {
+            this.detectChanges();
+        }, 5000);
     }
 
     status() {
