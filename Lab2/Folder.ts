@@ -3,6 +3,7 @@ import File from './File';
 import TextFile from './TextFile';
 import ImageFile from "./ImageFile";
 import sizeOf from 'image-size';
+import ProgramFile from "./ProgramFile";
 
 class Folder {
     files: File[] = [];
@@ -23,8 +24,8 @@ class Folder {
                 this.files.push(new ImageFile(fileName, fileExtension, dimensions.width, dimensions.height, fileData));
             } else if (fileExtension === 'txt') {
                 this.files.push(new TextFile(fileName, fileExtension, fileData));
-            } else if (fileExtension === 'ts') {
-                console.log(`Program file detected: ${file}`);
+            } else if (fileExtension === 'py' || fileExtension === 'java') {
+                this.files.push(new ProgramFile(fileName, fileExtension, fileData));
             }
         });
 
