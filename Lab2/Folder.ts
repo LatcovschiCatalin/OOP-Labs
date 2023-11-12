@@ -1,8 +1,9 @@
 import * as fs from 'fs';
 import File from './File';
 import TextFile from './TextFile';
-import ImageFile from "./ImageFile";
+import ImageFile from './ImageFile';
 import sizeOf from 'image-size';
+import ProgramFile from './ProgramFile';
 
 class Folder {
     files: File[] = [];
@@ -10,6 +11,7 @@ class Folder {
 
     constructor() {
         this.readFilesFromSRC();
+        this.scheduleDetection();
     }
 
     private readFilesFromSRC() {
@@ -23,12 +25,10 @@ class Folder {
                 this.files.push(new ImageFile(fileName, fileExtension, dimensions.width, dimensions.height, fileData));
             } else if (fileExtension === 'txt') {
                 this.files.push(new TextFile(fileName, fileExtension, fileData));
-            } else if (fileExtension === 'ts') {
-                console.log(`Program file detected: ${file}`);
+            } else if (fileExtension === 'py' || fileExtension === 'java') {
+                this.files.push(new ProgramFile(fileName, fileExtension, fileData));
             }
         });
-
-        console.log('Files in the SRC folder have been read and added to the SRC.');
     }
 
     private getImageDimensions(filePath: string) {
@@ -59,13 +59,60 @@ class Folder {
         }
     }
 
+    private getFilePath(file: File): string {
+        return `./SRC/${file.name}.${file.extension}`;
+    }
+
+    private isFileAdded(file: File): boolean {
+        const filePath = this.getFilePath(file);
+        return !fs.existsSync(filePath);
+    }
+
+    private isFileDeleted(file: File): boolean {
+        return !this.files.some((f) => `${f.name}.${f.extension}` === `${file.name}.${file.extension}`);
+    }
+
+    private isFileChanged(filePath: string, lastCommitTime: Date): boolean {
+        const fileData = fs.readFileSync(filePath, 'utf-8');
+        return fileData !== fs.readFileSync(filePath, 'utf-8') || lastCommitTime < fs.statSync(filePath).mtime;
+    }
+
+    private detectChanges() {
+        console.log('Scheduled detection:');
+        this.files.forEach((file) => {
+            const filePath = this.getFilePath(file);
+
+            if (this.isFileAdded(file)) {
+                console.log(`${file.name}.${file.extension}: Added`);
+            } else if (this.isFileDeleted(file)) {
+                console.log(`${file.name}.${file.extension}: Deleted`);
+            } else {
+                const hasChanged = this.isFileChanged(filePath, file.updatedDateTime !== file.createdDateTime ? file.lastCommitDate : this.lastSnapshotTime);
+                console.log(`${file.name}.${file.extension}: ${hasChanged ? 'Changed' : 'Unchanged'}`);
+            }
+        });
+    }
+
+    private scheduleDetection() {
+        setInterval(() => {
+            this.detectChanges();
+        }, 5000);
+    }
+
     status() {
         console.log('Change Status Since Last Snapshot:');
+
         this.files.forEach((file) => {
-            const filePath = `./SRC/${file.name}.${file.extension}`;
-            const fileData = fs.readFileSync(filePath, 'utf-8');
-            file.hasChangedSinceCommit = fileData !== file.data;
-            console.log(`${file.name}.${file.extension}: ${file.hasChangedSinceLastCommit() ? 'Changed' : 'Unchanged'}`);
+            const filePath = this.getFilePath(file);
+
+            if (this.isFileAdded(file)) {
+                console.log(`${file.name}.${file.extension}: Added`);
+            } else if (this.isFileDeleted(file)) {
+                console.log(`${file.name}.${file.extension}: Deleted`);
+            } else {
+                const hasChanged = this.isFileChanged(filePath, file.lastCommitDate);
+                console.log(`${file.name}.${file.extension}: ${hasChanged ? 'Changed' : 'Unchanged'}`);
+            }
         });
     }
 }
