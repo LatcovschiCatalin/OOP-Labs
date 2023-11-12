@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import File from './File';
 import TextFile from './TextFile';
-import ImageFile from "./ImageFile";
+import ImageFile from './ImageFile';
 import sizeOf from 'image-size';
-import ProgramFile from "./ProgramFile";
+import ProgramFile from './ProgramFile';
 
 class Folder {
     files: File[] = [];
@@ -60,13 +60,38 @@ class Folder {
         }
     }
 
+    private getFilePath(file: File): string {
+        return `./SRC/${file.name}.${file.extension}`;
+    }
+
+    private isFileAdded(file: File): boolean {
+        const filePath = this.getFilePath(file);
+        return !this.files.some((f) => `${f.name}.${f.extension}` === `${file.name}.${file.extension}`);
+    }
+
+    private isFileDeleted(file: File): boolean {
+        return !fs.existsSync(this.getFilePath(file));
+    }
+
+    private isFileChanged(filePath: string, lastCommitTime: Date): boolean {
+        const fileData = fs.readFileSync(filePath, 'utf-8');
+        return fileData !== fs.readFileSync(filePath, 'utf-8');
+    }
+
     status() {
         console.log('Change Status Since Last Snapshot:');
+
         this.files.forEach((file) => {
-            const filePath = `./SRC/${file.name}.${file.extension}`;
-            const fileData = fs.readFileSync(filePath, 'utf-8');
-            file.hasChangedSinceCommit = fileData !== file.data;
-            console.log(`${file.name}.${file.extension}: ${file.hasChangedSinceLastCommit() ? 'Changed' : 'Unchanged'}`);
+            const filePath = this.getFilePath(file);
+
+            if (this.isFileAdded(file)) {
+                console.log(`${file.name}.${file.extension}: Added`);
+            } else if (this.isFileDeleted(file)) {
+                console.log(`${file.name}.${file.extension}: Deleted`);
+            } else {
+                const hasChanged = this.isFileChanged(filePath, file.lastCommitDate);
+                console.log(`${file.name}.${file.extension}: ${hasChanged ? 'Changed' : 'Unchanged'}`);
+            }
         });
     }
 }
